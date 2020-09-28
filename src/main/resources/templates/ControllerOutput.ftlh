@@ -7,10 +7,6 @@
     <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
-    <form action="/convertInches" method="get">
-        <label for="inches">Inches:</label>
-        <input id="inches" name="inches" type="number">
-        <button type="submit">Senden</button>
-    </form>
+<p>Das Ergebnis ist ${cm} cm und ${mm} mm.</p>
 </body>
 </html>
