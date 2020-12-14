@@ -11,15 +11,17 @@ import java.util.Map;
 @Controller
 public class ConverterController {
 
-    @GetMapping("convertInches")
-    public ModelAndView convertInches(@RequestParam double inches) {
-        final double result = inches * 2.54;
-        final int cm = (int)result;
+    @GetMapping("convert")
+    public ModelAndView convert(@RequestParam(defaultValue = "0") double feet, @RequestParam(defaultValue = "0") double inches) {
+        final double result = (12 * feet + inches) * 2.54;
+        final int cm = (int) result;
         final int mm = (int)Math.round(10 * (result - cm));
         final Map<String, Object> model = new HashMap<>();
+        model.put("feet", feet);
+        model.put("inches", inches);
         model.put("cm", cm);
         model.put("mm", mm);
-        return new ModelAndView("ControllerOutput", model);
+        return new ModelAndView("ConverterOutput", model);
     }
 
 }

@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Converter</title>
+    <title>Converter Result</title>
     <meta name="description" content="Simple converter that demonstrates the MVC pattern">
     <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
-<p>Das Ergebnis ist ${cm} cm und ${mm} mm.</p>
+${feet} Feet und ${inches} Inches sind ${cm} cm und ${mm} mm.
+
+<a href="/">Zurück</a>
 </body>
 </html>
